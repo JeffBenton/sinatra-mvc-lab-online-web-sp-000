@@ -5,11 +5,11 @@ class PigLatinizer
   def to_piglatin(str)
     words = str.split(" ")
     words.collect do |word|
-      latinize_word(word)
+      piglatinize(word)
     end.join(" ")
   end
   
-  def latinize_word(word)
+  def piglatinize(word)
     vowels = ["a", "e", "i", "o", "u", "y"]
     if vowels.include?(word[0])
       return "#{word}ay"
