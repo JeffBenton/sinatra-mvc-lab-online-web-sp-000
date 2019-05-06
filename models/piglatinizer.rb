@@ -2,7 +2,7 @@ class PigLatinizer
   def initialize
   end
   
-  def to_piglatin(str)
+  def piglatinize(str)
     words = str.split(" ")
     words.collect do |word|
       piglatinize(word)
