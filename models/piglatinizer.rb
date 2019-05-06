@@ -15,6 +15,6 @@ class PigLatinizer
       return "#{word}way"
     end
     parts = word.split /([aeiou].*)/
-    "#{parts.last}#{parts.first.downcase}ay"
+    "#{parts.last}#{parts.first}ay"
   end
 end
