@@ -11,7 +11,7 @@ class PigLatinizer
   
   def piglatinize_word(word)
     vowels = ["a", "e", "i", "o", "u", "y"]
-    if vowels.include?(word[0])
+    if vowels.include?(word[0].downcase)
       return "#{word}way"
     end
     "#{word[1, word.length-1]}#{word[0].downcase}ay"
