@@ -14,6 +14,7 @@ class PigLatinizer
     if vowels.include?(word[0].downcase)
       return "#{word}way"
     end
-    "#{word[1, word.length-1]}#{word[0].downcase}ay"
+    parts = word.split /([aeiou].*)/
+    "#{parts.last}#{parts.first.downcase}ay"
   end
 end
