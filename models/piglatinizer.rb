@@ -1,12 +1,9 @@
 class PigLatinizer
-  attr_accessor :str
-  
-  def initialize(str)
-    @str = str
+  def initialize
   end
   
-  def to_piglatin
-    words = @str.split(" ")
+  def to_piglatin(str)
+    words = str.split(" ")
     words.collect do |word|
       latinize_word(word)
     end.join(" ")
